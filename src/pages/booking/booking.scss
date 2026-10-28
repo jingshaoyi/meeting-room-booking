@@ -1,0 +1,302 @@
+.page {
+  min-height: 100vh;
+  padding: 24rpx 24rpx 220rpx;
+  box-sizing: border-box;
+}
+
+.room-banner {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 24rpx;
+  background: linear-gradient(135deg, #4c6fff 0%, #2f54eb 100%);
+  border-radius: 24rpx;
+  color: #fff;
+}
+
+.banner-badge {
+  width: 84rpx;
+  height: 84rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20rpx;
+}
+
+.banner-badge-text {
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+.banner-info {
+  margin-left: 24rpx;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.banner-name {
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.banner-desc {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  opacity: 0.9;
+}
+
+.block {
+  margin-top: 28rpx;
+  padding: 28rpx 24rpx;
+  background: #fff;
+  border-radius: 24rpx;
+}
+
+.block-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.block-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1f2329;
+}
+
+.block-title-sub {
+  font-size: 22rpx;
+  color: #8a9099;
+}
+
+.date-scroll {
+  margin-top: 24rpx;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.date-row {
+  display: inline-block;
+}
+
+.date-chip {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16rpx;
+  padding: 16rpx 26rpx;
+  background: #f5f7fa;
+  border-radius: 16rpx;
+}
+
+.date-chip-active {
+  background: #2f54eb;
+}
+
+.date-chip-day {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #1f2329;
+}
+
+.date-chip-day-active {
+  color: #fff;
+}
+
+.date-chip-week {
+  margin-top: 4rpx;
+  font-size: 20rpx;
+  color: #8a9099;
+}
+
+.date-chip-week-active {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.slot-grid {
+  margin-top: 24rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slot {
+  width: 210rpx;
+  margin-right: 12rpx;
+  margin-bottom: 16rpx;
+  padding: 18rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f7fa;
+  border-radius: 14rpx;
+  border: 2rpx solid transparent;
+  box-sizing: border-box;
+}
+
+.slot:nth-child(3n) {
+  margin-right: 0;
+}
+
+.slot-text {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #1f2329;
+}
+
+.slot-sub {
+  margin-top: 4rpx;
+  font-size: 20rpx;
+  color: #8a9099;
+}
+
+.slot-selected {
+  background: #eef2ff;
+  border-color: #2f54eb;
+
+  .slot-text {
+    color: #2f54eb;
+  }
+
+  .slot-sub {
+    color: #2f54eb;
+  }
+}
+
+.slot-occupied {
+  background: #f0f1f3;
+
+  .slot-text {
+    color: #b3b8bf;
+  }
+
+  .slot-sub {
+    color: #b3b8bf;
+  }
+}
+
+.slot-past {
+  background: #f7f8fa;
+
+  .slot-text {
+    color: #c6cad1;
+  }
+
+  .slot-sub {
+    color: #c6cad1;
+  }
+}
+
+.form {
+  margin-top: 8rpx;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #f0f1f3;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.form-label {
+  width: 100rpx;
+  font-size: 28rpx;
+  color: #1f2329;
+}
+
+.form-input {
+  flex: 1;
+  font-size: 28rpx;
+  color: #1f2329;
+}
+
+.form-placeholder {
+  color: #b3b8bf;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 24rpx;
+  padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+  background: #fff;
+  box-shadow: 0 -4rpx 16rpx rgba(31, 35, 41, 0.06);
+  box-sizing: border-box;
+}
+
+.footer-summary {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.footer-time {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1f2329;
+}
+
+.footer-hint {
+  font-size: 26rpx;
+  color: #8a9099;
+}
+
+.footer-room {
+  margin-top: 4rpx;
+  font-size: 22rpx;
+  color: #8a9099;
+}
+
+.submit-btn {
+  margin-left: 24rpx;
+  width: 260rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0;
+  background: #2f54eb;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 44rpx;
+
+  &::after {
+    border: none;
+  }
+}
+
+.page-state {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8a9099;
+  font-size: 28rpx;
+}
+
+.state-btn {
+  margin-top: 32rpx;
+  width: 200rpx;
+  background: #2f54eb;
+  color: #fff;
+  font-size: 26rpx;
+
+  &::after {
+    border: none;
+  }
+}
+
+.banner-approval {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #fff;
+  opacity: 0.9;
+}

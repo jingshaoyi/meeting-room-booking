@@ -1,0 +1,63 @@
+{
+  "collections": {
+    "rooms": {
+      "clientRead": false,
+      "clientWrite": false,
+      "fields": {
+        "name": "string",
+        "location": "string",
+        "capacity": "number",
+        "facilities": "string[]",
+        "status": "active | inactive",
+        "requiresApproval": "boolean",
+        "sort": "number",
+        "createdAt": "number",
+        "updatedAt": "number"
+      },
+      "indexes": [
+        { "fields": ["status", "sort"], "order": ["asc", "asc"] }
+      ]
+    },
+    "bookings": {
+      "clientRead": false,
+      "clientWrite": false,
+      "fields": {
+        "roomId": "string",
+        "roomName": "string",
+        "date": "YYYY-MM-DD",
+        "slotIds": "string[]",
+        "timeLabel": "HH:mm-HH:mm",
+        "topic": "string",
+        "attendees": "number",
+        "status": "pending | approved | rejected | cancelled",
+        "userId": "openid",
+        "userName": "string",
+        "approverId": "openid",
+        "approvedAt": "number",
+        "rejectReason": "string",
+        "createdAt": "number",
+        "updatedAt": "number"
+      },
+      "indexes": [
+        { "fields": ["userId", "createdAt"], "order": ["asc", "desc"] },
+        { "fields": ["roomId", "date", "status"], "order": ["asc", "asc", "asc"] },
+        { "fields": ["status", "createdAt"], "order": ["asc", "desc"] },
+        { "fields": ["date", "status", "createdAt"], "order": ["asc", "asc", "desc"] }
+      ]
+    },
+    "users": {
+      "clientRead": false,
+      "clientWrite": false,
+      "fields": {
+        "_id": "openid",
+        "name": "string",
+        "role": "user | admin",
+        "createdAt": "number",
+        "updatedAt": "number"
+      },
+      "indexes": [
+        { "fields": ["role"], "order": ["asc"] }
+      ]
+    }
+  }
+}
